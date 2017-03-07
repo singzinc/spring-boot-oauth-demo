@@ -1,0 +1,15 @@
+
+
+curl -XPOST -k foo:foosecret@localhost:9000/authServer/oauth/token \
+   -d grant_type=password -d client_id=foo -d client_secret=foosecret \
+   -d redirect_uri=http://localhost:9000 -d username=bar -d password=barsecret
+
+
+
+
+
+
+TOKEN=6c3333a1-de06-4788-aa0a-ea807cb9ea3c
+
+curl -H "Authorization: Bearer $TOKEN" http://localhost:9001/resource/
+
